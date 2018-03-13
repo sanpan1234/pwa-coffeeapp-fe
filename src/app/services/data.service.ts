@@ -10,16 +10,16 @@ export class DataService {
 
   public wsEndpoint = 'http://localhost:3102';
   getList(callback) {
-    const list = [
+    /* const list = [
       new Coffee('Double Espresso', 'Sunny Cafe', new PlaceLocation('123 Market St', 'San Francisco')),
       new Coffee('Caramel Americano', 'StarCoffee', new PlaceLocation('Gran Via 34', 'Madrid'))
     ]
-    callback(list);
-    /* this.http.get(`${this.wsEndpoint}/coffees`)
+    callback(list); */
+    this.http.get(`${this.wsEndpoint}/coffees`)
       .subscribe(response => {
         console.log(response.json());
         callback(response.json());
-      }) */
+      })
   }
 
   save(coffee, callback) {
