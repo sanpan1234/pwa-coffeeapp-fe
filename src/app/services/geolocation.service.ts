@@ -26,7 +26,7 @@ export class GeolocationService {
     if (/iPad|iPhone|iPod/.test(navigator.userAgent)){
       return `https://maps.apple.com/?q=${query}`;
     } else {
-      return `https://maps.google.com/q=${query}`;
+      return `https://www.google.com/maps/search/?api=1&query=${query}`;
     }
   }
 
